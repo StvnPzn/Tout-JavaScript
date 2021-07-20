@@ -1,0 +1,53 @@
+<html>
+  <body>
+    <h1 id="monH1"></h1>
+    <h2 id="monH2"></h2>
+    <h3 id="monH3"></h3>
+    <!-- <script type="text/javascript" src="hello.js"></script> -->
+  </body>
+
+    <script type="text/javascript">
+      var dt = new Date ();
+      var jour = dt.getDay();
+      var msg = "";
+
+      console.log(dt);
+
+      switch (jour) {
+        case 1:
+          msg = "Dur le Lundi";
+          break;
+        case 0:
+        case 6:
+          msg = "C'est le week-end !";
+          break;
+        default:
+          msg = "Pleine semaine : au boulot !";
+          break;
+      }
+      document.getElementById('monH1').innerHTML = msg;
+
+      var somme = 0;
+
+      for (var n=1; n<=10; n+=1) {
+        somme+=n
+      }
+      document.getElementById('monH2').innerHTML = "Somme = " + somme
+
+      function getPluriel(nb) {
+        return nb>1 ? "s" : "";
+      }
+
+      var prix = 25, nbArticle = 1
+      console.log("Votre panier vaut " + prix + " euro" + getPluriel(prix));
+      console.log("Il contient " + nbArticle + " article" + getPluriel(nbArticle));
+
+      var test = 0
+
+      setInterval(function() {
+        test++;
+        document.getElementById('monH3').innerHTML = test;
+      }, 250);
+
+    </script>
+</html>

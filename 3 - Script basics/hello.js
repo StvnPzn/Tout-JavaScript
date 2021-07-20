@@ -1,4 +1,4 @@
-alert("Hello Worl via un fichier JS externe");
+alert("Hello World via un fichier JS externe");
 
 var a;
 var n1 = 10;
